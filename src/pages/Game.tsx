@@ -46,9 +46,11 @@ const Game = () => {
           <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center overflow-hidden">
             <img src={monsterImage} alt="D&D Monster" className="w-full h-full object-cover" />
           </div>
-          <div className="p-6 bg-sidebar-background">
-            <h2 className="text-3xl font-serif mb-1 text-card-foreground">Act X</h2>
-            <p className="text-sm opacity-70 text-card-foreground">description</p>
+          <div>
+            <div className="p-6 bg-sidebar-background">
+              <h2 className="text-3xl font-serif mb-1 text-card-foreground">Act X</h2>
+              <p className="text-sm opacity-70 text-card-foreground">description</p>
+            </div>
           </div>
         </aside>
 
