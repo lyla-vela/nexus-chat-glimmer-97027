@@ -82,7 +82,7 @@ const Game = () => {
           {/* Bottom Section - User Input */}
           <div className="bg-sidebar-background p-6 pt-0">
             {/* User Text Box */}
-            <div className="bg-card rounded border-4 border-primary/30 p-4">
+            <div className="bg-card rounded border-4 border-primary/30 p-4 h-48">
               <p className="text-sm text-muted-foreground">User text box</p>
             </div>
           </div>
