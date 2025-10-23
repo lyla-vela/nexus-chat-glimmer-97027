@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Menu } from "lucide-react";
 
 const Game = () => {
   const navigate = useNavigate();
@@ -84,27 +86,22 @@ const Game = () => {
               <p className="text-sm text-muted-foreground">User text box</p>
             </div>
 
-            {/* Right Menu */}
-            <div className="w-48 bg-accent rounded border-4 border-primary/30 p-4 flex flex-col justify-between relative">
-              <Button variant="ghost" size="sm" className="absolute top-2 right-2 text-foreground">
-                ✕
-              </Button>
-              <div className="space-y-2 mt-8 text-right">
-                <p className="text-sm font-semibold">Main Menu</p>
-                <p className="text-sm font-semibold">Character Stats</p>
-                <p className="text-sm font-semibold">Restart</p>
-                <p className="text-sm font-semibold">Exit</p>
-              </div>
-              <div className="flex justify-end">
-                <div className="w-8 h-8 bg-primary/20 rounded flex items-center justify-center">
-                  <div className="space-y-1">
-                    <div className="w-4 h-0.5 bg-foreground"></div>
-                    <div className="w-4 h-0.5 bg-foreground"></div>
-                    <div className="w-4 h-0.5 bg-foreground"></div>
-                  </div>
+            {/* Burger Menu */}
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button variant="outline" size="icon" className="border-4 border-primary/30">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-48" align="end">
+                <div className="space-y-2">
+                  <Button variant="ghost" className="w-full justify-start">Main Menu</Button>
+                  <Button variant="ghost" className="w-full justify-start">Character Stats</Button>
+                  <Button variant="ghost" className="w-full justify-start">Restart</Button>
+                  <Button variant="ghost" className="w-full justify-start">Exit</Button>
                 </div>
-              </div>
-            </div>
+              </PopoverContent>
+            </Popover>
           </div>
 
           {/* Bottom Left - Dice Icons */}
