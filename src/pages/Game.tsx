@@ -1,23 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
-import CharacterSheet from "@/components/CharacterSheet";
-import ChatInterface from "@/components/ChatInterface";
-import DiceRoller from "@/components/DiceRoller";
-import CharacterCreation from "@/components/CharacterCreation";
 import { Button } from "@/components/ui/button";
-import { LogOut } from "lucide-react";
 
 const Game = () => {
-  const [session, setSession] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const { toast } = useToast();
 
   useEffect(() => {
     checkAuth();
-    loadSession();
   }, []);
 
   const checkAuth = async () => {
@@ -27,49 +17,10 @@ const Game = () => {
     }
   };
 
-  const loadSession = async () => {
-    try {
-      const { data: sessions, error } = await supabase
-        .from("game_sessions")
-        .select("*")
-        .order("created_at", { ascending: false })
-        .limit(1);
-
-      if (error) throw error;
-      if (sessions && sessions.length > 0) {
-        setSession(sessions[0]);
-      }
-    } catch (error: any) {
-      toast({
-        title: "Error loading session",
-        description: error.message,
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleLogout = async () => {
     await supabase.auth.signOut();
     navigate("/");
   };
-
-  const handleCharacterCreated = (newSession: any) => {
-    setSession(newSession);
-  };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <p className="text-muted-foreground">Loading your adventure...</p>
-      </div>
-    );
-  }
-
-  if (!session) {
-    return <CharacterCreation onCharacterCreated={handleCharacterCreated} />;
-  }
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
