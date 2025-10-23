@@ -6,6 +6,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Menu } from "lucide-react";
 import monsterImage from "@/assets/dnd-monster.png";
 import characterImage from "@/assets/dnd-character.png";
+import characterImage2 from "@/assets/dnd-character2.png";
 
 const Game = () => {
   const navigate = useNavigate();
@@ -93,10 +94,15 @@ const Game = () => {
             </div>
           </div>
 
-          {/* Bottom - Character Image & Menu */}
+          {/* Bottom - Character Images & Menu */}
           <div className="bg-sidebar-background px-6 pb-4 flex justify-between items-center">
-            <div className="w-20 h-20 bg-card rounded border-2 border-sidebar-border overflow-hidden">
-              <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
+            <div className="flex gap-2">
+              <div className="w-20 h-20 bg-card rounded border-2 border-sidebar-border overflow-hidden">
+                <img src={characterImage2} alt="Character 2" className="w-full h-full object-cover" />
+              </div>
+              <div className="w-20 h-20 bg-card rounded border-2 border-sidebar-border overflow-hidden">
+                <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
+              </div>
             </div>
 
             {/* Burger Menu */}
