@@ -38,7 +38,7 @@ const Game = () => {
       <div className="flex-1 flex overflow-hidden">
         {/* Left Panel - Image & Act Info */}
         <aside className="w-80 bg-card border-r-4 border-sidebar-background flex flex-col">
-          <div className="flex-1 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
+          <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
             <div className="text-center p-4">
               <div className="text-6xl font-serif mb-4">✕</div>
               <p className="text-xs text-muted-foreground">Generated image for current act maybe</p>
