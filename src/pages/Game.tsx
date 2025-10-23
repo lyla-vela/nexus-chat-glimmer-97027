@@ -95,7 +95,7 @@ const Game = () => {
 
           {/* Bottom - Character Image & Menu */}
           <div className="bg-sidebar-background px-6 pb-4 flex justify-between items-center">
-            <div className="w-32 h-16 bg-card rounded border-2 border-sidebar-border overflow-hidden">
+            <div className="w-20 h-20 bg-card rounded border-2 border-sidebar-border overflow-hidden">
               <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
             </div>
 
