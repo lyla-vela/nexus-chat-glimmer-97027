@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Menu } from "lucide-react";
+import monsterImage from "@/assets/dnd-monster.png";
 
 const Game = () => {
   const navigate = useNavigate();
@@ -28,9 +29,14 @@ const Game = () => {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="bg-sidebar-background border-b-2 border-sidebar-border p-3 flex justify-between items-center">
-        <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">
-          Dungeons & Dragons
-        </h1>
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border overflow-hidden">
+            <img src={monsterImage} alt="D&D Monster" className="w-full h-full object-cover" />
+          </div>
+          <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">
+            Dungeons & Dragons
+          </h1>
+        </div>
         <Button variant="ghost" size="sm" onClick={handleLogout} className="text-sidebar-foreground hover:bg-sidebar-accent">
           Logout
         </Button>
