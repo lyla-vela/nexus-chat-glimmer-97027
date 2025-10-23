@@ -79,11 +79,23 @@ const Game = () => {
             </div>
           </div>
 
-          {/* Bottom Section - User Input & Menu */}
-          <div className="bg-sidebar-background p-6 pt-0 flex gap-4">
+          {/* Bottom Section - User Input */}
+          <div className="bg-sidebar-background p-6 pt-0">
             {/* User Text Box */}
-            <div className="flex-1 bg-card rounded border-4 border-primary/30 p-4">
+            <div className="bg-card rounded border-4 border-primary/30 p-4">
               <p className="text-sm text-muted-foreground">User text box</p>
+            </div>
+          </div>
+
+          {/* Bottom - Dice Icons & Menu */}
+          <div className="bg-sidebar-background px-6 pb-4 flex justify-between items-center">
+            <div className="flex gap-2">
+              <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
+                <span className="text-xl font-serif">✕</span>
+              </div>
+              <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
+                <span className="text-xl font-serif">✕</span>
+              </div>
             </div>
 
             {/* Burger Menu */}
@@ -102,16 +114,6 @@ const Game = () => {
                 </div>
               </PopoverContent>
             </Popover>
-          </div>
-
-          {/* Bottom Left - Dice Icons */}
-          <div className="bg-sidebar-background px-6 pb-4 flex gap-2">
-            <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-              <span className="text-xl font-serif">✕</span>
-            </div>
-            <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-              <span className="text-xl font-serif">✕</span>
-            </div>
           </div>
         </div>
       </div>
