@@ -56,11 +56,6 @@ const Game = () => {
             <h2 className="text-3xl font-serif mb-1 text-card-foreground">Act X</h2>
             <p className="text-sm opacity-70 text-card-foreground">description</p>
           </div>
-          
-          {/* Character Image */}
-          <div className="flex-1 m-4 bg-muted border-4 border-sidebar-background overflow-hidden">
-            <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
-          </div>
         </aside>
 
         {/* Center & Right Panel */}
@@ -101,7 +96,8 @@ const Game = () => {
           {/* Bottom - Dice Icons & Menu */}
           <div className="bg-sidebar-background px-6 pb-4 flex justify-between items-center">
             <div className="flex gap-2">
-              <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
+              <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border overflow-hidden">
+                <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
               </div>
               <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
               </div>
