@@ -43,14 +43,15 @@ const Game = () => {
       <div className="flex-1 flex overflow-hidden">
         {/* Left Panel - Image & Act Info */}
         <aside className="w-80 bg-card border-r-4 border-sidebar-background flex flex-col">
-          <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
+          <div className="h-44 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
             <div className="text-center p-4">
+              <div className="text-6xl font-serif mb-4">✕</div>
               <p className="text-xs text-muted-foreground">Generated image for current act maybe</p>
             </div>
           </div>
-          <div className="p-4 bg-sidebar-background text-foreground">
-            <h2 className="text-2xl font-serif mb-1">Act </h2>
-            <p className="text-sm opacity-100">description</p>
+          <div className="p-6 bg-sidebar-background text-sidebar-foreground">
+            <h2 className="text-3xl font-serif mb-1">Act X</h2>
+            <p className="text-sm opacity-70">description</p>
           </div>
         </aside>
 
@@ -114,10 +115,10 @@ const Game = () => {
           {/* Bottom Left - Dice Icons */}
           <div className="bg-sidebar-background px-6 pb-4 flex gap-2">
             <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-              <span className="text-xl font-serif">MPC Char image</span>
+              <span className="text-xl font-serif">✕</span>
             </div>
             <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-              <span className="text-xl font-serif">Char image</span>
+              <span className="text-xl font-serif">✕</span>
             </div>
           </div>
         </div>
