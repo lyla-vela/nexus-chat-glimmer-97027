@@ -44,9 +44,9 @@ const Game = () => {
               <p className="text-xs text-muted-foreground">Generated image for current act maybe</p>
             </div>
           </div>
-          <div className="p-6 bg-sidebar-background text-sidebar-foreground">
-            <h2 className="text-3xl font-serif mb-1">Act X</h2>
-            <p className="text-sm opacity-70">description</p>
+          <div className="p-4 bg-sidebar-background text-foreground">
+            <h2 className="text-2xl font-serif mb-1">Act X</h2>
+            <p className="text-sm opacity-90">description</p>
           </div>
         </aside>
 
