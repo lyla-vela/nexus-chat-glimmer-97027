@@ -11,9 +11,7 @@ const Game = () => {
   }, []);
 
   const checkAuth = async () => {
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
+    const { data: { session } } = await supabase.auth.getSession();
     if (!session) {
       navigate("/");
     }
@@ -28,13 +26,10 @@ const Game = () => {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="bg-sidebar-background border-b-2 border-sidebar-border p-3 flex justify-between items-center">
-        <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">Dungeons & Dragons</h1>
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={handleLogout}
-          className="text-sidebar-foreground hover:bg-sidebar-accent"
-        >
+        <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">
+          Dungeons & Dragons
+        </h1>
+        <Button variant="ghost" size="sm" onClick={handleLogout} className="text-sidebar-foreground hover:bg-sidebar-accent">
           ✕
         </Button>
       </header>
@@ -43,7 +38,7 @@ const Game = () => {
       <div className="flex-1 flex overflow-hidden">
         {/* Left Panel - Image & Act Info */}
         <aside className="w-80 bg-card border-r-4 border-sidebar-background flex flex-col">
-          <div className="h-74 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
+          <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
             <div className="text-center p-4">
               <div className="text-6xl font-serif mb-4">✕</div>
               <p className="text-xs text-muted-foreground">Generated image for current act maybe</p>
