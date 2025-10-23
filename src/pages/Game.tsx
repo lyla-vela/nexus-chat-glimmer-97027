@@ -31,14 +31,9 @@ const Game = () => {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="bg-sidebar-background border-b-2 border-sidebar-border p-3 flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border overflow-hidden">
-            <img src={monsterImage} alt="D&D Monster" className="w-full h-full object-cover" />
-          </div>
-          <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">
-            Dungeons & Dragons
-          </h1>
-        </div>
+        <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">
+          Dungeons & Dragons
+        </h1>
         <Button variant="ghost" size="sm" onClick={handleLogout} className="text-sidebar-foreground hover:bg-sidebar-accent">
           Logout
         </Button>
@@ -48,10 +43,8 @@ const Game = () => {
       <div className="flex-1 flex overflow-hidden">
         {/* Left Panel - Image & Act Info */}
         <aside className="w-80 bg-card border-r-4 border-sidebar-background flex flex-col">
-          <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
-            <div className="text-center p-4">
-              <p className="text-xs text-muted-foreground">Generated image for current act maybe</p>
-            </div>
+          <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center overflow-hidden">
+            <img src={monsterImage} alt="D&D Monster" className="w-full h-full object-cover" />
           </div>
           <div className="p-6 bg-sidebar-background">
             <h2 className="text-3xl font-serif mb-1 text-card-foreground">Act X</h2>
