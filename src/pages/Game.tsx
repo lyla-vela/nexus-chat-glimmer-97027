@@ -11,7 +11,9 @@ const Game = () => {
   }, []);
 
   const checkAuth = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
     if (!session) {
       navigate("/");
     }
@@ -26,10 +28,13 @@ const Game = () => {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="bg-sidebar-background border-b-2 border-sidebar-border p-3 flex justify-between items-center">
-        <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">
-          Dungeons & Dragons
-        </h1>
-        <Button variant="ghost" size="sm" onClick={handleLogout} className="text-sidebar-foreground hover:bg-sidebar-accent">
+        <h1 className="text-xl font-serif text-sidebar-foreground tracking-wider">Dungeons & Dragons</h1>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={handleLogout}
+          className="text-sidebar-foreground hover:bg-sidebar-accent"
+        >
           ✕
         </Button>
       </header>
@@ -40,13 +45,12 @@ const Game = () => {
         <aside className="w-80 bg-card border-r-4 border-sidebar-background flex flex-col">
           <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
             <div className="text-center p-4">
-              <div className="text-6xl font-serif mb-4">✕</div>
               <p className="text-xs text-muted-foreground">Generated image for current act maybe</p>
             </div>
           </div>
           <div className="p-4 bg-sidebar-background text-foreground">
-            <h2 className="text-2xl font-serif mb-1">Act X</h2>
-            <p className="text-sm opacity-90">description</p>
+            <h2 className="text-2xl font-serif mb-1">Act </h2>
+            <p className="text-sm opacity-100">description</p>
           </div>
         </aside>
 
@@ -110,10 +114,10 @@ const Game = () => {
           {/* Bottom Left - Dice Icons */}
           <div className="bg-sidebar-background px-6 pb-4 flex gap-2">
             <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-              <span className="text-xl font-serif">✕</span>
+              <span className="text-xl font-serif">MPC Char image</span>
             </div>
             <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-              <span className="text-xl font-serif">✕</span>
+              <span className="text-xl font-serif">Char image</span>
             </div>
           </div>
         </div>
