@@ -93,14 +93,10 @@ const Game = () => {
             </div>
           </div>
 
-          {/* Bottom - Dice Icons & Menu */}
+          {/* Bottom - Character Image & Menu */}
           <div className="bg-sidebar-background px-6 pb-4 flex justify-between items-center">
-            <div className="flex gap-2">
-              <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border overflow-hidden">
-                <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
-              </div>
-              <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-              </div>
+            <div className="w-32 h-16 bg-card rounded border-2 border-sidebar-border overflow-hidden">
+              <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
             </div>
 
             {/* Burger Menu */}
