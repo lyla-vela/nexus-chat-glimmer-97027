@@ -32,7 +32,7 @@ const Game = () => {
           Dungeons & Dragons
         </h1>
         <Button variant="ghost" size="sm" onClick={handleLogout} className="text-sidebar-foreground hover:bg-sidebar-accent">
-          ✕
+          Logout
         </Button>
       </header>
 
@@ -42,7 +42,6 @@ const Game = () => {
         <aside className="w-80 bg-card border-r-4 border-sidebar-background flex flex-col">
           <div className="h-64 bg-muted m-4 border-4 border-sidebar-background flex items-center justify-center">
             <div className="text-center p-4">
-              <div className="text-6xl font-serif mb-4">✕</div>
               <p className="text-xs text-muted-foreground">Generated image for current act maybe</p>
             </div>
           </div>
@@ -91,10 +90,8 @@ const Game = () => {
           <div className="bg-sidebar-background px-6 pb-4 flex justify-between items-center">
             <div className="flex gap-2">
               <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-                <span className="text-xl font-serif">✕</span>
               </div>
               <div className="w-12 h-12 bg-card rounded border-2 border-sidebar-border flex items-center justify-center">
-                <span className="text-xl font-serif">✕</span>
               </div>
             </div>
 
