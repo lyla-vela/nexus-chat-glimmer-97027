@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Menu } from "lucide-react";
 import monsterImage from "@/assets/dnd-monster.png";
+import characterImage from "@/assets/dnd-character.png";
 
 const Game = () => {
   const navigate = useNavigate();
@@ -54,6 +55,11 @@ const Game = () => {
           <div className="p-6 bg-sidebar-background">
             <h2 className="text-3xl font-serif mb-1 text-card-foreground">Act X</h2>
             <p className="text-sm opacity-70 text-card-foreground">description</p>
+          </div>
+          
+          {/* Character Image */}
+          <div className="flex-1 m-4 bg-muted border-4 border-sidebar-background overflow-hidden">
+            <img src={characterImage} alt="Character" className="w-full h-full object-cover" />
           </div>
         </aside>
 
